@@ -50,7 +50,10 @@ class BoardController: NSObject,
   // Tip: Take a look at how resetBoard is implemented above. The only difference is that you don't want to change the settings
   func resetBoardWithCurrentSettings() {
     // START YOUR CODE HERE
-    // ...
+    
+      numTimesGuessed = 0
+      collectionView.reloadData()
+      
     // END YOUR CODE HERE
   }
   

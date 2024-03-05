@@ -4,7 +4,7 @@ Submitted by: **Casey Chin**
 
 **Wordle pt.2** is an app that generates random words for the user to guess, giving hints by color coding the letters. It can be set to different themes, and has an alien mode.
 
-Time spent: **2** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
@@ -22,13 +22,12 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
+- [ ] I changed some of the words because some of them weren't the right length and I changed the animal and countries categories into mario and pokemon because I thought they woule be more fun.
 
 ## Video Walkthrough
 
-Here is a reminder on how to embed Loom videos on GitHub. Feel free to remove this reminder once you upload your README. 
-
-[Guide]](https://www.youtube.com/watch?v=GA92eKlYio4) .
+https://youtu.be/j1IzvT4Vrm4?feature=shared
 
 ## Notes
 

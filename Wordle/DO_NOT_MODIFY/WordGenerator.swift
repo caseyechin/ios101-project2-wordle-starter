@@ -8,16 +8,16 @@
 import Foundation
 
 enum WordTheme: String {
-  case normal, animals, countries
+  case normal, mario, pokemon
   
   func possibleWords(numLetters: Int) -> [String] {
     switch self {
     case .normal:
       return normalWords(with: numLetters)
-    case .animals:
-      return animalWords(with: numLetters)
-    case .countries:
-      return countryWords(with: numLetters)
+    case .mario:
+      return marioWords(with: numLetters)
+    case .pokemon:
+      return pokemonWords(with: numLetters)
     }
   }
   
@@ -34,28 +34,28 @@ enum WordTheme: String {
     return []
   }
   
-  func animalWords(with numLetters: Int) -> [String] {
+  func marioWords(with numLetters: Int) -> [String] {
     if numLetters == kMinLetters {
-      return ["SEAL", "DEER", "FROG"]
+      return ["JUMP", "PIPE", "TOAD", "FLAG", "KART", "BOOS", "KONG", "WARP"]
     } else if numLetters == kMinLetters + 1 {
-      return ["HORSE", "PANDA", "ZEBRA"]
+      return ["MARIO", "LUIGI", "PEACH", "DAISY", "WARIO", "WORLD", "SUPER", "YOSHI", "KOOPA", "BIRDO", "WHOMP", "CAPPY", "DIDDY"]
     } else if numLetters == kMinLetters + 2 {
-      return ["JAGUAR", "PELICAN", "DOLPHIN"]
+      return ["BOWSER", "GOOMBA", "THWOMP", "DONKEY", "BOBOMB", "CASTLE"]
     } else if numLetters == kMaxLetters {
-      return ["ELEPHANT", "GIRAFFE", "PLATYPUS"]
+      return ["WALUIGI", "DRMARIO", "TANOOKI", "KINGDOM", "POWERUP", "ITALIAN"]
     }
     return []
   }
   
-  func countryWords(with numLetters: Int) -> [String] {
+  func pokemonWords(with numLetters: Int) -> [String] {
     if numLetters == kMinLetters {
-      return ["PERU", "CUBA", "MALI"]
+      return ["POKE", "BALL", "JINX", "ONIX", "ABRA", "SAWK", "UXIE", "SNOM", "XATU", "AXEW", "HOOH"]
     } else if numLetters == kMinLetters + 1 {
-      return ["INDIA", "CHILE", "QATAR"]
+      return ["EEVEE", "MARIL", "LUGIA", "SNIVY", "PICHU", "RALTS", "HOOPA", "UNOWN", "DEINO", "ROTOM", "ABSOL", "DITTO"]
     } else if numLetters == kMinLetters + 2 {
-      return ["BELIZE", "BRAZIL", "GREECE"]
+      return ["CUBONE", "GASTLY", "ARCEUS", "ZAPDOS", "LITTEN", "ROWLET", "MUDKIP", "PIDGEY", "PIPLUP", "FLYGON", "MELTAN", "SKITTY"]
     } else if numLetters == kMaxLetters {
-      return ["AMERICA", "GERMANY", "JAMAICA"]
+      return ["PIKACHU", "TRAINER", "POKEMON", "IVYSAUR", "JIRACHI", "VICTINI", "DUGTRIO", "BISHARP"]
     }
     return []
   }

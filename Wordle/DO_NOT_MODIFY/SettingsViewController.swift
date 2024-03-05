@@ -26,8 +26,8 @@ class SettingsViewController: UIViewController {
   @IBOutlet weak var isAlienWordleSwitch: UISwitch!
   
   private var normalThemeAction: UIAction!
-  private var countryThemeAction: UIAction!
-  private var animalThemeAction: UIAction!
+  private var pokemonThemeAction: UIAction!
+  private var marioThemeAction: UIAction!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -56,17 +56,17 @@ class SettingsViewController: UIViewController {
                                  handler: { [unowned self] action in
       self.didTapNormalThemeButton()
     })
-    countryThemeAction = UIAction(title: "Countries",
-                                 state: theme == .countries ? .on : .off,
+    pokemonThemeAction = UIAction(title: "Pokemon",
+                                 state: theme == .pokemon ? .on : .off,
                                  handler: { [unowned self] action in
-      self.didTapCountriesThemeButton()
+      self.didTapPokemonThemeButton()
     })
-    animalThemeAction = UIAction(title: "Animals",
-                                 state: theme == .animals ? .on : .off,
+    marioThemeAction = UIAction(title: "Mario",
+                                 state: theme == .mario ? .on : .off,
                                  handler: { [unowned self] action in
-      self.didTapAnimalsThemeButton()
+      self.didTapMarioThemeButton()
     })
-    wordThemeButton.menu = UIMenu(children: [normalThemeAction, countryThemeAction, animalThemeAction])
+    wordThemeButton.menu = UIMenu(children: [normalThemeAction, pokemonThemeAction, marioThemeAction])
     wordThemeButton.showsMenuAsPrimaryAction = true
   }
   
@@ -97,19 +97,19 @@ class SettingsViewController: UIViewController {
     turnOnTheme(theme: .normal)
   }
   
-  private func didTapCountriesThemeButton() {
-    turnOnTheme(theme: .countries)
+  private func didTapPokemonThemeButton() {
+    turnOnTheme(theme: .pokemon)
   }
   
-  private func didTapAnimalsThemeButton() {
-    turnOnTheme(theme: .animals)
+  private func didTapMarioThemeButton() {
+    turnOnTheme(theme: .mario)
   }
   
   private func turnOnTheme(theme: WordTheme) {
     didChangeSettings = true
     normalThemeAction.state = theme == .normal ? .on : .off
-    countryThemeAction.state = theme == .countries ? .on : .off
-    animalThemeAction.state = theme == .animals ? .on : .off
+    pokemonThemeAction.state = theme == .pokemon ? .on : .off
+    marioThemeAction.state = theme == .mario ? .on : .off
     SettingsManager.shared.set(wordTheme: theme)
   }
   
